@@ -8,3 +8,13 @@ body {
     
 }
 
+.sel:hover {
+	/*
+	When we hold the mouse over it resizes that element
+	.sel class is used to resize the social media images
+	*/
+     -webkit-transform: scale(1.2);
+     -moz-transform: scale(1.2);
+     -o-transform: scale(1.2);
+}
+
