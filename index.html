@@ -12,12 +12,18 @@
 
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
 	<!-- css_file link -->
 	<link rel="stylesheet" type="text/css" href="css/css_file.css">
+	
+	<!-- My JavaScript file -->
+	<script src="js/top_picture.js"></script>
 </head>	
-<body>
+<!--Because the script ("js/top_picture.js") does not load at the same time as the web page
+  we use the 'onload' event-->
+<body onload="slide_head_img()">
   <header>
-	<img class="img-responsive" src="img/jonas_brothers_top.jpg" alt="jonas_brothers_top picture">
+	<img id="JB_top_picture" class="img-responsive" alt="jonas_brothers_top picture">
 	<!--The .img-responsive class applies display: block; and max-width: 100%; and height: auto; to the image-->
        <nav class="navbar navbar-inverse">
 		<div class="container-fluid">
