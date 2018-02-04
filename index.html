@@ -2,6 +2,8 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--We use the viewport meta tag to control layout on mobile browsers-->
 	<title>Jonas Brothers</title>
 
 	<!-- Latest compiled and minified CSS -->
@@ -28,15 +30,22 @@
        <nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
+			<!--For a smaller display the nav_bar will collapse-->
+			 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#JBNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>                        
+			 </button>
 				<a class="navbar-brand" href="#">Jonas Brothers</a>
 			</div>
-			
+		<div class="collapse navbar-collapse" id="JBNavbar">
 			<ul class="nav navbar-nav navbar-right">
 				<li><a id="news" href="#">News</a></li>
 				<li><a id="concert" href="#">Concerts</a></li>
 				<li><a id="listen" href="#">Listen</a></li>
 				<li><a id="contact" href="#">Contact</a></li>
 			</ul>
+		</div>
 		</div>
 	  </nav>
 	
