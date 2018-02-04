@@ -18,9 +18,12 @@ function slide_head_img(){
 	/*For pictures with different names we can use an array or object
 	and post it the value*/
 	document.getElementById("JB_top_picture").src ="img/jonas_brothers_top"+i+".jpg";
+	/*Adjust the background for each picture*/
+	var background=["#9d9797","white","black","#110706","#242828"];
+	
+    document.body.style.backgroundColor =background[i];
 	// Run function every 300000 miliseconds(5 minutes)
 	setTimeout("slide_head_img()",300000);
 	
 }
-/*Because the script does not load at the same time as the web page
-  we use the 'onload' event*/
+
