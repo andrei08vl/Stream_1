@@ -29,11 +29,23 @@
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
+			
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#admin_Navbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span> 
+			 </button>
+			  
 				<a class="navbar-brand" href="#">JB_admin_dashboard</a>
 			</div>
-   		<ul class="nav navbar-nav navbar-right">
-           <li><a onclick="logout()" href="#"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
-		</ul>
+			<div class="collapse navbar-collapse" id="admin_Navbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Add new's</a></li>
+					<li><a href="#">Upload media</a></li>
+					<li><a href="#">Plan concerts/Parties</a></li>
+				<li><a onclick="logout()" href="#"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+				</ul>
+			</div>
   </div>
 </nav>
   
