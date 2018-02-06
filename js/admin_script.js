@@ -64,12 +64,12 @@ function deleteobj(x){
 
 function edit(x){
 	
-	/* the information submitted by the form is stored in an array */
+	/* The information submitted by the form is stored in an array */
 	var arr={};
 		arr.title=document.getElementById('edit_title').value;
 		arr.date=document.getElementById('edit_date').value;
 		arr.message=document.getElementById('edit_message').value;
-	/* the array is stored in the same location of obj */
+	/* The array is stored in the same location of obj */
 	obj[x] = arr;
 	
 	/*Update the news_dashboard data without refreshing the page*/
@@ -77,4 +77,15 @@ function edit(x){
 	/* Data is stored after in the html5 localStorage */
 	localStorage.setItem('obj',JSON.stringify(obj));
 
+}
+
+function toedit(x){             
+       /* toedit function send the form's information based on the current id  
+		*/
+       document.getElementById("edit_title").value = this.obj[x].title;
+       document.getElementById("edit_date").value = this.obj[x].date;
+       document.getElementById("edit_message").value = this.obj[x].message;
+	   
+	   /*Set the onclick event with edit function based on the current id */
+	   document.getElementById('button').setAttribute("onclick","edit("+x+")");
 }
