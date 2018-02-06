@@ -34,6 +34,9 @@ function addnews() {
 		arr.message=document.getElementById('message').value;
 	
 	/* Data is stored after in the Object */
+	/* The push() method adds a new element at the end of an array 
+	   unshift method add a new element at the at the beginning of an array
+	   */
     obj.unshift(arr);
 	/*Update the news_dashboard data without refreshing the page*/
 	show();
@@ -42,5 +45,17 @@ function addnews() {
 	/* Data is stored after in the html5 localStorage */
 	localStorage.setItem('obj',JSON.stringify(obj));
 
+
+}
+
+function deleteobj(x){
+	/* Splice method si used to remove an element from object  without leaving gaps in the array 
+	x is index location and '1' number of items to be removed */
+	obj.splice(x,1);
+
+	/*Update the news_dashboard data without refreshing the page*/
+	show();
+	/* Data is stored after in the localStorage */
+		localStorage.setItem('obj',JSON.stringify(obj));
 
 }
