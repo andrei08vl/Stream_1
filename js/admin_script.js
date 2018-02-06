@@ -61,3 +61,20 @@ function deleteobj(x){
 		localStorage.setItem('obj',JSON.stringify(obj));
 
 }
+
+function edit(x){
+	
+	/* the information submitted by the form is stored in an array */
+	var arr={};
+		arr.title=document.getElementById('edit_title').value;
+		arr.date=document.getElementById('edit_date').value;
+		arr.message=document.getElementById('edit_message').value;
+	/* the array is stored in the same location of obj */
+	obj[x] = arr;
+	
+	/*Update the news_dashboard data without refreshing the page*/
+	show();
+	/* Data is stored after in the html5 localStorage */
+	localStorage.setItem('obj',JSON.stringify(obj));
+
+}
