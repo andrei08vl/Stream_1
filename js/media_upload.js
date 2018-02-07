@@ -104,6 +104,7 @@ function show_videos(){
    
     vid+="<video width='320' height='240' controls>";
 	vid+="<source src="+videos[v].video_name+" type='video/mp4'></video>"
+	vid+="<input type='submit' onclick='deletevideo("+v+")' value='Delete'>";
     vid+="</div></div>";
     }
    
