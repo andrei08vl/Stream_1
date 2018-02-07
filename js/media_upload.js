@@ -122,7 +122,7 @@ function deletevideo(v){
     localStorage.setItem('remove_path',JSON.stringify('../files/videos/'+path));
    	
 	/* Splice method si used to remove an element from object  without leaving gaps in the array */
-	pictures.splice(v,1);
+	videos.splice(v,1);
 	/* Update admin media page */
 	show_videos();
 
