@@ -35,7 +35,7 @@ function show_pictures(){
    
     img+=" <div class='col-md-4'><div class='thumbnail'>";  
    
-    img+= "<img src=\'../file/pictures/"+pictures[p].picture_name+"\' alt=\'"+pictures[p].picture_name+"\'class=\'img-responsive img-rounded\'>";
+    img+= "<img src=\'../files/pictures/"+pictures[p].picture_name+"\' alt=\'"+pictures[p].picture_name+"\'class=\'img-responsive img-rounded\'>";
 	img+="<input type='submit' onclick='deletepicture("+p+")'/ value='Delete'>";
     img+="</div></div>";
     }
@@ -50,7 +50,7 @@ show_pictures();
 function deletepicture(p){
     var path=pictures[p].picture_name;
 	/* The location of the picture is saved in localStorage to be transmitted to the server */
-    localStorage.setItem('picture_path',JSON.stringify('../file/pictures/'+path));
+    localStorage.setItem('picture_path',JSON.stringify('../files/pictures/'+path));
    	
 	/* Splice method si used to remove an element from object  without leaving gaps in the array */
 pictures.splice(p,1);
