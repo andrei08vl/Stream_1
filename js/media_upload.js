@@ -47,3 +47,18 @@ function show_pictures(){
 
 show_pictures();
 
+function deletepicture(p){
+    var path=pictures[p].picture_name;
+	/* The location of the picture is saved in localStorage to be transmitted to the server */
+    localStorage.setItem('picture_path',JSON.stringify('../file/pictures/'+path));
+   	
+	/* Splice method si used to remove an element from object  without leaving gaps in the array */
+pictures.splice(p,1);
+	/* Update admin media page */
+show_pictures();
+
+	/* Updated information is saved in localStorage and after updated the server database_file */
+	localStorage.setItem('pictures',JSON.stringify(pictures));
+
+}
+
