@@ -51,7 +51,7 @@ show_pictures();
 function deletepicture(p){
     var path=pictures[p].picture_name;
 	/* The location of the picture is saved in localStorage to be transmitted to the server */
-    localStorage.setItem('picture_path',JSON.stringify('../files/pictures/'+path));
+    localStorage.setItem('remove_path',JSON.stringify('../files/pictures/'+path));
    	
 	/* Splice method si used to remove an element from object  without leaving gaps in the array */
 	pictures.splice(p,1);
