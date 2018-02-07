@@ -9,10 +9,10 @@ obj=JSON.parse(localStorage.getItem('obj'));
 function show(){
   
 var txt=" ";
-	 txt += "<table class='table'><thead><tr><td><strong>Title</strong></td><td><strong>Date</strong></td><td>";
-	 txt +="<strong>Messages</strong></td><td><strong>Actions</strong></td></tr></thead>";
+	 txt += "<table class='table'><thead><tr><td><strong>Title</strong></td><td><strong>Date</strong></td>";
+	 txt +="<td><strong>Actions</strong></td></tr></thead>";
         for (var x in obj) {
-            txt += "<tr><td>" + obj[x].title + "</td><td>"+obj[x].date+"</td><td>"+obj[x].message+"</td>";
+            txt += "<tr><td>" + obj[x].title + "</td><td>"+obj[x].date+"</td>";
 			txt +="<td><button onclick='deleteobj("+x+")'><span class='glyphicon glyphicon-trash'></span></button>";
 			txt +="<button data-toggle='modal' data-target='#edit' onclick='toedit("+x+")'><span class='glyphicon glyphicon-edit' ></button></td></tr>";
         }
