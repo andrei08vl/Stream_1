@@ -93,3 +93,23 @@ function add_video(){
 	push={};
 }
 
+function show_videos(){
+      
+	var v; 
+    var vid="";
+   
+    for(v in videos){
+   
+    vid+=" <div class='col-md-4'><div class='thumbnail'>";  
+   
+    vid+="<video width='320' height='240' controls>";
+	vid+="<source src="+videos[v].video_name+" type='video/mp4'></video>"
+    vid+="</div></div>";
+    }
+   
+      
+      document.getElementById("vid").innerHTML =vid;
+      
+}
+
+show_videos();
