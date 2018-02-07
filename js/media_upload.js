@@ -26,3 +26,24 @@ localStorage.setItem('pictures',JSON.stringify(pictures));
 push={};
 }
 
+function show_pictures(){
+      
+	var p; 
+    var img="";
+   
+    for(p in pictures){
+   
+    img+=" <div class='col-md-4'><div class='thumbnail'>";  
+   
+    img+= "<img src=\'../file/pictures/"+pictures[p].picture_name+"\' alt=\'"+pictures[p].picture_name+"\'class=\'img-responsive img-rounded\'>";
+   
+    img+="</div></div>";
+    }
+   
+      
+      document.getElementById("pic").innerHTML =img;
+      
+}
+
+show_pictures();
+
