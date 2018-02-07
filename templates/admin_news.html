@@ -87,9 +87,9 @@
           <div class="form-group">
     
 	<form id="myform_news">
-	<input class="input-group form-control"  id="title" type="text"/><br/>
-	<input class="input-group form-control"  id="date"  type="text"/><br/>
-	<textarea class="form-control" rows="5" id="message"></textarea><hr>
+	<input class="input-group form-control"  id="title" type="text" placeholder="Add a title" required/><br/>
+	<input class="input-group form-control"  id="date"  type="text" placeholder="Add time&date [obtional]"/><br/>
+	<textarea class="form-control" rows="5" id="message" required></textarea><hr>
 	<button class="btn btn-success" onclick="addnews();save_newstofile();">add</button>
 	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 	</form>
@@ -118,9 +118,9 @@
           <div class="form-group">
     <div class="modal-footer">
 	<form id="myformedit">
-	<input class="input-group form-control"  id="edit_title" type="text"/><br/>
-	<input class="input-group form-control"  id="edit_date"  type="text"/><br/>
-	<textarea class="form-control" rows="5" id="edit_message"></textarea><hr>
+	<input class="input-group form-control"  id="edit_title" type="text" placeholder="Add a title" required/><br/>
+	<input class="input-group form-control"  id="edit_date"  type="text" placeholder="Add time&date [obtional]"/><br/>
+	<textarea class="form-control" rows="5" id="edit_message" required></textarea><hr>
 	<button class="btn btn-success" id="button">edit</button>
 	
      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
