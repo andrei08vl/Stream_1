@@ -36,7 +36,7 @@ function show_pictures(){
     img+=" <div class='col-md-4'><div class='thumbnail'>";  
    
     img+= "<img src=\'../file/pictures/"+pictures[p].picture_name+"\' alt=\'"+pictures[p].picture_name+"\'class=\'img-responsive img-rounded\'>";
-   
+	img+="<input type='submit' onclick='deletepicture("+p+")'/ value='Delete'>";
     img+="</div></div>";
     }
    
