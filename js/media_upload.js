@@ -113,3 +113,19 @@ function show_videos(){
 }
 
 show_videos();
+
+function deletevideo(v){
+	
+    var path=videos[v].picture_name;
+	/* The location of the video is saved in localStorage to be transmitted to the server */
+    localStorage.setItem('remove_path',JSON.stringify('../files/videos/'+path));
+   	
+	/* Splice method si used to remove an element from object  without leaving gaps in the array */
+	pictures.splice(p,1);
+	/* Update admin media page */
+	show_videos();
+
+	/* Updated information is saved in localStorage and after updated the server database_file */
+	localStorage.setItem('videos',JSON.stringify(videos));
+
+}
