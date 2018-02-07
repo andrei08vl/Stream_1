@@ -13,7 +13,7 @@ var txt=" ";
 	 txt +="<td><strong>Actions</strong></td></tr></thead>";
         for (var x in obj) {
             txt += "<tr><td>" + obj[x].title + "</td><td>"+obj[x].date+"</td>";
-			txt +="<td><button onclick='deleteobj("+x+")'><span class='glyphicon glyphicon-trash'></span></button>";
+			txt +="<td><button onclick='deleteobj("+x+");save_newstofile();'><span class='glyphicon glyphicon-trash'></span></button>";
 			txt +="<button data-toggle='modal' data-target='#edit' onclick='toedit("+x+")'><span class='glyphicon glyphicon-edit' ></button></td></tr>";
         }
         txt += "</table>" ;
@@ -88,5 +88,5 @@ function toedit(x){
        document.getElementById("edit_message").value = this.obj[x].message;
 	   
 	   /*Set the onclick event with edit function based on the current id */
-	   document.getElementById('button').setAttribute("onclick","edit("+x+")");
+	   document.getElementById('button').setAttribute("onclick","edit("+x+");save_newstofile();");
 }
