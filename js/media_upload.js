@@ -1,30 +1,31 @@
-//localStorage.setItem('pictures','[]');
+/* Pictures */
+
 var pictures=[];
- pictures=JSON.parse(localStorage.getItem("pictures")); 
+	pictures=JSON.parse(localStorage.getItem("pictures")); 
 
 function add_picture(){
- if(pictures.value===null){
+	if(pictures.value===null){
      
- localStorage.setItem('pictures','[]');
+	localStorage.setItem('pictures','[]');
  
      
- }else{
+	}else{
      
-pictures=JSON.parse(localStorage.getItem('pictures'));
-}
-var push={}
-var picture=document.getElementById("picture").value;
+	pictures=JSON.parse(localStorage.getItem('pictures'));
+	}
+	var push={}
+	var picture=document.getElementById("picture").value;
 
-/* The value of input type "file" is e.g. "C:\\fakepath\\file name.file format
+	/* The value of input type "file" is e.g. "C:\\fakepath\\file name.file format
 	slice method is used to take a slice from string starting at the selected index location */
-push.picture_name=picture.slice(12);
+	push.picture_name=picture.slice(12);
 
-/*  Unshift method add a new element at the at the beginning of an array/object */
-pictures.unshift(push);
-/* Data is stored after in the localStorage */
-localStorage.setItem('pictures',JSON.stringify(pictures));
-push={};
-}
+	/*  Unshift method add a new element at the at the beginning of an array/object */
+	pictures.unshift(push);
+	/* Data is stored after in the localStorage */
+	localStorage.setItem('pictures',JSON.stringify(pictures));
+	push={};
+	}
 
 function show_pictures(){
       
@@ -53,12 +54,42 @@ function deletepicture(p){
     localStorage.setItem('picture_path',JSON.stringify('../files/pictures/'+path));
    	
 	/* Splice method si used to remove an element from object  without leaving gaps in the array */
-pictures.splice(p,1);
+	pictures.splice(p,1);
 	/* Update admin media page */
-show_pictures();
+	show_pictures();
 
 	/* Updated information is saved in localStorage and after updated the server database_file */
 	localStorage.setItem('pictures',JSON.stringify(pictures));
 
+}
+
+/* Videos */
+
+var videos=[];
+ videos=JSON.parse(localStorage.getItem("videos")); 
+
+function add_video(){
+	
+	if(videos.value===null){
+     
+	localStorage.setItem('videos','[]');
+ 
+     
+	}else{
+     
+	videos=JSON.parse(localStorage.getItem('videos'));
+	}
+	var push={}
+	var video=document.getElementById("videoclip").value;
+
+	/* The value of input type "file" is e.g. "C:\\fakepath\\file name.file format
+	slice method is used to take a slice from string starting at the selected index location */
+	push.video_name=video.slice(12);
+
+	/*  Unshift method add a new element at the at the beginning of an array/object */
+	videos.unshift(push);
+	/* Data is stored after in the localStorage */
+	localStorage.setItem('videos',JSON.stringify(videos));
+	push={};
 }
 
