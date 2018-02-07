@@ -117,7 +117,7 @@ show_videos();
 
 function deletevideo(v){
 	
-    var path=videos[v].picture_name;
+    var path=videos[v].video_name;
 	/* The location of the video is saved in localStorage to be transmitted to the server */
     localStorage.setItem('remove_path',JSON.stringify('../files/videos/'+path));
    	
