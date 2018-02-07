@@ -140,6 +140,30 @@
   <script src="../js/admin.js"></script>
   <script src="../js/media_upload.js"></script>
   <script src="../js/show_hide.js"></script>
+  <script>
+  
+  /*-- Xmlhttprequest is used to send data to php file  this method
+		works only on the server the same as php script */
+
+    function sendtophpfile(location, message){
+	
+	var data = 'data='+message;
+	
+	var xmlhttp = new XMLHttpRequest();
+
+	xmlhttp.open("POST",location,true);
+        //Must add this request header to XMLHttpRequest request for POST
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xmlhttp.send(data);
+}
+
+  /* Save to pictures server location db file files/pictures.js */ 
+  sendtophpfile("../php/save2.php", JSON.stringify(localStorage.getItem('pictures')));
+  /* Send picture location path to be deleted */
+  sendtophpfile("../php/delete_media.php",JSON.parse(localStorage.getItem('picture_path')));
+ 
+ 
+ </script>
 
     
 	  <footer>
