@@ -2,7 +2,7 @@
 
 var events=[{event_type: "event_type", event_date: "event_date", event_time: "event_time", event_description: "event_description"}];
 
-events=localStorage.getItem('events');
+//events=localStorage.getItem('events');
 
 function show_events(){
       
@@ -13,8 +13,9 @@ function show_events(){
    
 	ev+="<table class='table'><thead><tr><td><strong>Event date</strong></td><td><strong>Event time</strong></td>";
 	ev+="<td><strong>Event type</strong></td><td><strong>Action</strong></td></tr></thead>";
-	ev+="<tr><td>"+events[e].event_date+"</td><td>"+events[e].event_time+"</td><td>"+events[e].event_type+"</td>"
-	ev+="<button onclick='delete_event("+e+")'><span class='glyphicon glyphicon-trash'></span></button></tr>";
+	ev+="<tr><td>"+events[e].event_date+"</td><td>"+events[e].event_time+"</td><td>"+events[e].event_type+"</td>";
+	ev+="<td><button onclick='delete_event("+e+")'><span class='glyphicon glyphicon-trash'></span></button>";
+	ev+="<button data-toggle='modal' data-target='#edit_event_modal'><span class='glyphicon glyphicon-edit' ></button></td></tr>";
 	ev+="</table>";
     }
    
@@ -60,4 +61,16 @@ function delete_event(ev){
 	/* Data is stored after in the localStorage */
 		localStorage.setItem('events',JSON.stringify(events));
 
+}
+
+function send_event_toedit(ev){             
+       /* send_event_toedit function send the form's information based on the 
+	   current id */
+       document.getElementById("edit_event_type").value = this.events[ev].event_type;
+	   document.getElementById("edit_event_date").value = this.events[ev].event_date;
+	   document.getElementById("edit_event_time").value = this.events[ev].event_time;
+	   document.getElementById("edit_event_description").value = this.events[ev].event_description;
+      
+	   
+	   
 }
