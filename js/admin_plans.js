@@ -13,7 +13,8 @@ function show_events(){
    
 	ev+="<table class='table'><thead><tr><td><strong>Event date</strong></td><td><strong>Event time</strong></td>";
 	ev+="<td><strong>Event type</strong></td><td><strong>Action</strong></td></tr></thead>";
-	ev+="<tr><td>"+events[e].event_date+"</td><td>"+events[e].event_time+"</td><td>"+events[e].event_type+"</td></tr>";
+	ev+="<tr><td>"+events[e].event_date+"</td><td>"+events[e].event_time+"</td><td>"+events[e].event_type+"</td>"
+	ev+="<button onclick='delete_event("+e+")'><span class='glyphicon glyphicon-trash'></span></button></tr>";
 	ev+="</table>";
     }
    
