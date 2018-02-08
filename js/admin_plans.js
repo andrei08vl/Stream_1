@@ -74,3 +74,20 @@ function send_event_toedit(ev){
 	   
 	   
 }
+
+function edit_events(e){
+	
+	/* The information submitted by the form is stored in an array */
+	var eve={};
+		eve.event_type=document.getElementById('edit_event_type').value;
+		eve.event_date=document.getElementById('edit_event_date').value;
+		eve.event_time=document.getElementById('edit_event_time').value;
+		eve.event_description=document.getElementById('edit_event_description').value;
+	
+	events[e] = eve;
+	
+	show_events();
+	
+	localStorage.setItem('events',JSON.stringify(events));
+
+}
