@@ -49,3 +49,14 @@ function add_event() {
 
 
 }
+
+function delete_event(ev){
+	/* Splice method si used to remove an element from object  without leaving gaps in the array 
+	ev is index location and '1' number of items to be removed */
+	events.splice(ev,1);
+
+	show_events();
+	/* Data is stored after in the localStorage */
+		localStorage.setItem('events',JSON.stringify(events));
+
+}
