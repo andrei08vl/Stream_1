@@ -98,7 +98,7 @@
 	     </div>
 	</div>
 	<textarea class="form-control" rows="5" id="event_description" placeholder="Event description" required></textarea><hr>
-	<button class="btn btn-success" onclick="add_event()">add</button>
+	<button class="btn btn-success" onclick="add_event();save_eventstofile()">add</button>
 	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 	</form>
 	<div class="modal-footer">
@@ -156,6 +156,23 @@
   <!-- My java script files -->
   <script src="../js/admin.js"></script>
   <script src="../js/admin_plans.js"></script>
+  <script>
+			
+   function save_eventstofile(){
+	/* The ingormation from localStorage is converted to string with 
+	JSON.stringify method and sent to php file*/
+	var data = 'data='+JSON.stringify(localStorage.getItem('events'));
+	
+	var xmlhttp = new XMLHttpRequest();
+
+	xmlhttp.open("POST","../php/save4.php",true);
+        //Must add this request header to XMLHttpRequest request for POST
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xmlhttp.send(data);
+}
+
+
+  </script>
 
     
 	  <footer>
