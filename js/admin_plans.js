@@ -15,7 +15,7 @@ function show_events(){
 	ev+="<td><strong>Event type</strong></td><td><strong>Action</strong></td></tr></thead>";
 	ev+="<tr><td>"+events[e].event_date+"</td><td>"+events[e].event_time+"</td><td>"+events[e].event_type+"</td>";
 	ev+="<td><button onclick='delete_event("+e+")'><span class='glyphicon glyphicon-trash'></span></button>";
-	ev+="<button data-toggle='modal' data-target='#edit_event_modal'><span class='glyphicon glyphicon-edit' ></button></td></tr>";
+	ev+="<button onclick='send_event_toedit("+e+")' data-toggle='modal' data-target='#edit_event_modal'><span class='glyphicon glyphicon-edit' ></button></td></tr>";
 	ev+="</table>";
     }
    
