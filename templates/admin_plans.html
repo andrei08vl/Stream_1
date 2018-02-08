@@ -86,7 +86,7 @@
         <div class="modal-body">
           <div class="form-group">
     
-	<form id="myform_news">
+	<form id="myform_events">
 	<input class="input-group form-control"  id="event_type" type="text" placeholder="Event type" required/><br/>
 	<div class="row">
 		 <div class="col-sm-9">
@@ -99,6 +99,43 @@
 	</div>
 	<textarea class="form-control" rows="5" id="event_description" placeholder="Event description" required></textarea><hr>
 	<button class="btn btn-success" onclick="add_event()">add</button>
+	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	</form>
+	<div class="modal-footer">
+   
+	</div>
+	</div>
+        </div>
+        </div>
+		</div>
+       </div>
+	   
+	    <!-- Edit an event Modal -->
+  <div class="modal fade" id="edit_event_modal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">adds an event</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+    
+	<form id="myform_edit events">
+	<input class="input-group form-control"  id="edit_event_type" type="text" placeholder="Event type" required/><br/>
+	<div class="row">
+		 <div class="col-sm-9">
+	<input class="input-group form-control"  id="edit_event_date"  type="text" placeholder="Event date"/><br/>
+	     </div>
+		 
+		 <div class="col-sm-3">
+	<input class="input-group form-control"  id="edit_event_time"  type="text" placeholder="Event time"/><br/>
+	     </div>
+	</div>
+	<textarea class="form-control" rows="5" id="edit_event_description" placeholder="Event description" required></textarea><hr>
+	<button class="btn btn-success">add</button>
 	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 	</form>
 	<div class="modal-footer">
