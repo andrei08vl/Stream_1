@@ -71,11 +71,11 @@ function send_event_toedit(ev){
 	   document.getElementById("edit_event_time").value = this.events[ev].event_time;
 	   document.getElementById("edit_event_description").value = this.events[ev].event_description;
       
-	   
+	   document.getElementById('edit_event_button').setAttribute("onclick","edit_event("+ev+")");
 	   
 }
 
-function edit_events(e){
+function edit_event(e){
 	
 	/* The information submitted by the form is stored in an array */
 	var eve={};
