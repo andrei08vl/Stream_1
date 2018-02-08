@@ -2,7 +2,7 @@
 
 var events=[{event_type: "event_type", event_date: "event_date", event_time: "event_time", event_description: "event_description"}];
 
-//events=localStorage.getItem('events');
+events=localStorage.getItem('events');
 
 function show_events(){
       
@@ -14,7 +14,7 @@ function show_events(){
 	ev+="<table class='table'><thead><tr><td><strong>Event date</strong></td><td><strong>Event time</strong></td>";
 	ev+="<td><strong>Event type</strong></td><td><strong>Action</strong></td></tr></thead>";
 	ev+="<tr><td>"+events[e].event_date+"</td><td>"+events[e].event_time+"</td><td>"+events[e].event_type+"</td>";
-	ev+="<td><button onclick='delete_event("+e+")'><span class='glyphicon glyphicon-trash'></span></button>";
+	ev+="<td><button onclick='delete_event("+e+");save_eventstofile();'><span class='glyphicon glyphicon-trash'></span></button>";
 	ev+="<button onclick='send_event_toedit("+e+")' data-toggle='modal' data-target='#edit_event_modal'><span class='glyphicon glyphicon-edit' ></button></td></tr>";
 	ev+="</table>";
     }
@@ -71,7 +71,7 @@ function send_event_toedit(ev){
 	   document.getElementById("edit_event_time").value = this.events[ev].event_time;
 	   document.getElementById("edit_event_description").value = this.events[ev].event_description;
       
-	   document.getElementById('edit_event_button').setAttribute("onclick","edit_event("+ev+")");
+	   document.getElementById('edit_event_button').setAttribute("onclick","edit_event("+ev+");save_eventstofile();");
 	   
 }
 
