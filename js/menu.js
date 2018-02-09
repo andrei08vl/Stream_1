@@ -6,7 +6,7 @@ $(document).ready(function(){
         $("#pages").load("templates/news.html");
     });
 	 $("#concert").click(function(){
-        $("#pages").load("templates/concerts.html");
+        $("#pages").load("templates/events.html");
     });
      $("#media").click(function(){
         $("#pages").load("templates/media.html");
