@@ -2,7 +2,7 @@
 
 var events=[{event_type: "event_type", event_date: "event_date", event_time: "event_time", event_description: "event_description"}];
 
-events=localStorage.getItem('events');
+events=JSON.parse(localStorage.getItem('events'));
 
 function show_events(){
       
