@@ -18,6 +18,15 @@
 	  
 }
 
+/* Navbar logo img */
+.img3{
+		padding: 5px;
+	 -webkit-animation: logo 2.5s infinite;
+	 -moz-animation: logo 2.5s infinite;
+	 animation: logo 2.5s infinite;
+	
+}
+
 /*JB logo animation */
 @keyframes logo{
 
