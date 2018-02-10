@@ -46,12 +46,14 @@
 				<a class="navbar-left hidden-lg hidden-md hidden-sm" href="#">
 	<img class="img-responsive img3" src="img/Jb_navbar_logo.png" width="50px" alt="JB_navbar_logo"/></a>
 			</div>
+			<!-- Because we use the same web page the mobile navbar menu does not close
+			to do this we use data-toggle="collapse" data-target="#JBNavbar" -->
 		<div class="collapse navbar-collapse" id="JBNavbar">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a id="news" href="#">News</a></li>
-				<li><a id="concert" href="#">Events</a></li>
-				<li><a id="media" href="#">Media</a></li>
-				<li><a id="contact" href="#">Contact</a></li>
+				<li><a id="news" href="#" data-toggle="collapse" data-target="#JBNavbar">News</a></li>
+				<li><a id="concert" href="#" data-toggle="collapse" data-target="#JBNavbar">Events</a></li>
+				<li><a id="media" href="#" data-toggle="collapse" data-target="#JBNavbar">Media</a></li>
+				<li><a id="contact" href="#" data-toggle="collapse" data-target="#JBNavbar">Contact</a></li>
 			</ul>
 		 </div>
 		</div>
