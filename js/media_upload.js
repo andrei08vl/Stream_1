@@ -16,7 +16,7 @@ function add_picture(){
 	var push={}
 	var picture=document.getElementById("picture").value;
 
-	/* The value of input type "file" is e.g. "C:\\fakepath\\file name.file format
+	/* The value of input type "file" is e.g. "C:\\fakepath\\file name.file format"
 	slice method is used to take a slice from string starting at the selected index location */
 	push.picture_name=picture.slice(12);
 
@@ -83,7 +83,7 @@ function add_video(){
 	var push={};
 	var video=document.getElementById("videoclip").value;
 
-	/* The value of input type "file" is e.g. "C:\\fakepath\\file name.file format
+	/* The value of input type "file" is e.g. "C:\\fakepath\\file name.file format"
 	slice method is used to take a slice from string starting at the selected index location */
 	push.video_name=video.slice(12);
 
@@ -152,8 +152,9 @@ function add_youtube_video(){
 	var push={};
 	var video=document.getElementById("youtube").value;
 
-	/* The value of input type "file" is e.g. "C:\\fakepath\\file name.file format
-	slice method is used to take a slice from string starting at the selected index location */
+	/* The value of input type "text" is e.g. "https://youtu.be/Fah5ElxSh6g"
+	slice method is used to take a slice from string starting at the selected index location 
+	the sliced string is from e.g "Fah5ElxSh6g"*/
 	push.video_name=video.slice(17);
 
 	/*  Unshift method add a new element at the at the beginning of an array/object */
@@ -178,5 +179,27 @@ function delete_youtubevideo(v){
 	localStorage.setItem('youtube',JSON.stringify(youtube));
 
 }
+
+function show_youtube_videos(){
+      
+	var v; 
+    var vid="";
+    vid +="<div id='box_video'>";
+    for(v in youtube){
+    /* to be able to view YouTube videos the embedded link must be used */
+    vid+=" <div class='box_videoclip'>";  
+    vid+="<button  class='btn button_img' type='submit' onclick='delete_youtubevideo("+v+");send_video_tophpfile();'>X</button>";
+    vid+="<iframe width='300' height='180' src='https://www.youtube.com/embed/"+youtube[v].video_name+"' frameborder='0' allow='autoplay;";
+	vid+="encrypted-media' allowfullscreen></iframe>";
+	
+    vid+="</div>";
+    }
+   vid+="</div>";
+      
+      document.getElementById("tube").innerHTML =vid;
+      
+}
+
+show_youtube_videos();
 
 
