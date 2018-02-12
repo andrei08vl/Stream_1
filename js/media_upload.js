@@ -164,3 +164,19 @@ function add_youtube_video(){
 	push={};
 }
 
+function delete_youtubevideo(v){
+	
+    var path=videos[v].video_name;
+
+   	
+	/* Splice method si used to remove an element from object  without leaving gaps in the array */
+	youtube.splice(v,1);
+	/* Update admin media page */
+	show_youtube_videos();
+
+	/* Updated information is saved in localStorage and after updated the server database_file */
+	localStorage.setItem('youtube',JSON.stringify(youtube));
+
+}
+
+
