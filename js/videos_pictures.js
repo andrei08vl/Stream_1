@@ -16,6 +16,23 @@
     img+="</div>";
 	/* When you access the page, the pictures are displayed first */
     document.getElementById('JB_media').innerHTML=img;
+	
+	 /* Videos */
+    var videos=JSON.parse(localStorage.getItem("videos"));
+    var v; 
+    var vi=" ";
+   
+    vi+="<div id='box_video'>";
+    for(v in videos){
+   
+    
+    vi+="<div class='box_videoclip'><video width='300' height='180'>";
+   
+    vi+="<source class='img_admin' src='../files/videos/"+videos[v].video_name+" type='video/mp4'>";
+	
+    vi+="<div></video>";
+    }
+    vi+="</div>";
   
   function show_hide(content){
 	  
