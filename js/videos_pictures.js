@@ -9,7 +9,7 @@
     
     img+="<div class='box_img'>";
    
-    img+="<img class='img_admin' width='100%' src='../files/pictures/"+pictures[p].picture_name+"' alt='"+pictures[p].picture_name+"'/>";
+    img+="<img width='100%' src='../files/pictures/"+pictures[p].picture_name+"' alt='"+pictures[p].picture_name+"'/>";
 	
     img+="</div>";
     }
