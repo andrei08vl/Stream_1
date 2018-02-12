@@ -98,16 +98,17 @@ function show_videos(){
       
 	var v; 
     var vid="";
-   
+    vid +="<div id='box_video'>";
     for(v in videos){
    
-    vid+=" <div class='col-md-4'><div class='thumbnail'>";  
-   
-    vid+="<video width='320' height='240' controls>";
-	vid+="<source src="+videos[v].video_name+" type='video/mp4'></video>"
-	vid+="<input type='submit' onclick='deletevideo("+v+")' value='Delete'>";
-    vid+="</div></div>";
+    vid+=" <div class='box_videoclip'>";  
+    vid+="<button  class='btn button_img' type='submit' onclick='deletevideo("+v+");send_video_tophpfile();'>X</button>";
+    vid+="<video width='300' height='180' controls>";
+	vid+="<source src="+videos[v].video_name+" type='video/mp4'></video>";
+	
+    vid+="</div>";
     }
+	vid+="</div>";
    
       
       document.getElementById("vid").innerHTML =vid;
