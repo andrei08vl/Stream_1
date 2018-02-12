@@ -10,4 +10,20 @@ body{
 	
 }
 
+/* Admin pictures 
+	Creating a flex box system for admin pictures*/
+
+#box_media{
+	display: flex; /*sets conatiner as a flex item*/
+	flex-direction:row;
+	flex-wrap:wrap; /*sets flex direction*/
+	margin-right:auto; 
+	margin-left:auto;
+	width:100%;	
+	height:100%;
+	padding:5px;
+	font-size: 0;	/* remove inline-block spacing*/
+	
+}
+
 
