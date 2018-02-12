@@ -132,3 +132,35 @@ function deletevideo(v){
 	localStorage.setItem('videos',JSON.stringify(videos));
 
 }
+
+/* YouTube videos */
+
+var youtube=[];
+ youtube=JSON.parse(localStorage.getItem("youtube")); 
+
+function add_youtube_video(){
+	
+	if(youtube.value===null){
+     
+	localStorage.setItem('youtube','[]');
+ 
+     
+	}else{
+     
+	videos=JSON.parse(localStorage.getItem('youtube'));
+	}
+	var push={};
+	var video=document.getElementById("youtube").value;
+
+	/* The value of input type "file" is e.g. "C:\\fakepath\\file name.file format
+	slice method is used to take a slice from string starting at the selected index location */
+	push.video_name=video.slice(17);
+
+	/*  Unshift method add a new element at the at the beginning of an array/object */
+	youtube.unshift(push);
+	/* Data is stored after in the localStorage */
+	localStorage.setItem('youtube',JSON.stringify(youtube));
+	show_youtube_videos();
+	push={};
+}
+
