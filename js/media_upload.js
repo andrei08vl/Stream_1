@@ -188,7 +188,7 @@ function show_youtube_videos(){
     for(v in youtube){
     /* to be able to view YouTube videos the embedded link must be used */
     vid+=" <div class='box_videoclip'>";  
-    vid+="<button  class='btn button_img' type='submit' onclick='delete_youtubevideo("+v+");send_video_tophpfile();'>X</button>";
+    vid+="<button  class='btn button_img' type='submit' onclick='delete_youtubevideo("+v+");send_youtube_tophpfile();'>X</button>";
     vid+="<iframe width='300' height='180' src='https://www.youtube.com/embed/"+youtube[v].video_name+"' frameborder='0' allow='autoplay;";
 	vid+="encrypted-media' allowfullscreen></iframe>";
 	
