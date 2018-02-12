@@ -41,10 +41,17 @@ body{
 }
 
 /*admin_upload.html button img class */
+
 .button_img{
 	
    max-width:100%;
-   opacity:0;
+   opacity:0; /* Now button is invisible */
      
+}
+
+.box_img:hover .button_img{
+	
+    opacity:1; /* When we hoover .box_img class, .button_img becomes visible */
+	
 }
 
