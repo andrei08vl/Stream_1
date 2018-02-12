@@ -55,3 +55,12 @@ body{
 	
 }
 
+.box_img:hover {
+	
+	/* When we hold the mouse over it resizes that element	*/
+     -webkit-transform: scale(1.2);
+     -moz-transform: scale(1.2);
+     -o-transform: scale(1.2);
+	 
+}
+
