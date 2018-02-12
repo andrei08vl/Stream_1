@@ -40,3 +40,11 @@ body{
 
 }
 
+/*admin_upload.html button img class */
+.button_img{
+	
+   max-width:100%;
+   opacity:0;
+     
+}
+

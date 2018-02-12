@@ -36,7 +36,7 @@ function show_pictures(){
     for(p in pictures){
 		
     img+="<div class='box_img'>";
-    img+="<button type='button' onclick='deletepicture("+p+");send_picture_tophpfile();'>X</button>";
+    img+="<button type='button' class='button_img' onclick='deletepicture("+p+");send_picture_tophpfile();'>X</button>";
     img+="<img width='100%' src='../files/pictures/"+pictures[p].picture_name+"' alt='"+pictures[p].picture_name+"'/>";
     img+="</div>";
 	
