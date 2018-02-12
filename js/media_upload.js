@@ -31,16 +31,17 @@ function show_pictures(){
       
 	var p; 
     var img="";
-   
+	
+    img+="<div id='box_media'>";
     for(p in pictures){
-   
-    img+=" <div class='col-md-4'><div class='thumbnail'>";  
-   
-    img+= "<img src=\'../files/pictures/"+pictures[p].picture_name+"\' alt=\'"+pictures[p].picture_name+"\'class=\'img-responsive img-rounded\'>";
-	img+="<input type='submit' onclick='deletepicture("+p+")'/ value='Delete'>";
-    img+="</div></div>";
+		
+    img+="<div class='box_img'>";
+    img+="<button type='button' onclick='deletepicture("+p+");send_picture_tophpfile();'>X</button>";
+    img+="<img width='100%' src='../files/pictures/"+pictures[p].picture_name+"' alt='"+pictures[p].picture_name+"'/>";
+    img+="</div>";
+	
     }
-   
+    img+="</div>";
       
       document.getElementById("pic").innerHTML =img;
       
