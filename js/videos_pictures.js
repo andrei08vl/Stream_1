@@ -34,17 +34,35 @@
     }
     vi+="</div>";
   
-  function show_hide(content){
-	  
+	 /* YouTube videos */
+    var youtube=JSON.parse(localStorage.getItem("youtube"));
+    var y; 
+    var vid="";
+    vid +="<div id='box_video'>";
+    for(y in youtube){
+   
+    vid+="<div class='box_videoclip'>";  
+    
+    vid+="<iframe width='300' height='180' src='https://www.youtube.com/embed/"+youtube[y].video_name+"' frameborder='0' allow='autoplay;";
+	vid+="encrypted-media' allowfullscreen></iframe>";
+	
+    vid+="</div>";
+    }
+   vid+="</div>";
+      
+     
+  
+    
+    function show_hide(content){
     if(content==pictures){
         
-    document.getElementById('JB_media').innerHTML="img";
-   
+    document.getElementById('JB_media').innerHTML=img;
+    document.getElementById('youtube_media').innerHTML="";
     
     }else if(content==videos){
         
-    document.getElementById('JB_media').innerHTML="vi";
-    
+    document.getElementById('JB_media').innerHTML=vi;
+    document.getElementById('youtube_media').innerHTML=vid;
     }
 }
 
