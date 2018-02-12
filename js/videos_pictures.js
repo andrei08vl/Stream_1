@@ -1,7 +1,15 @@
-function show_hide(content){
+  function show_hide(content){
+	  
+    if(content==pictures){
+        
+    document.getElementById('JB_media').innerHTML="img";
+   
     
-    document.getElementById('JB_media').innerHTML=content;
+    }else if(content==videos){
+        
+    document.getElementById('JB_media').innerHTML="vi";
     
+    }
 }
 
 var videos="<p>video</p>";
