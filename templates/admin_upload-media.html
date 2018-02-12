@@ -117,7 +117,7 @@
         <div class="modal-body">
           <form method="post" action="../php/upload_video.php" enctype="multipart/form-data">
           <input type="file" name="fileToUpload" id="videoclip"  accept="video/*"/>
-          <input type="submit" value="upload video" onclick="add_video()">
+          <input type="submit" value="upload video" onclick="add_video();send_video_tophpfile()">
           </form>
         </div>
         <div class="modal-footer">
@@ -144,7 +144,7 @@
         <div class="modal-body">
           <form method="post" action="../php/upload_picture.php" enctype="multipart/form-data">
           <input type="file" name="fileToUpload" id="picture" accept="image/*"/>
-          <input type="submit" value="Upload Image" name="submit" onclick="add_picture()">
+          <input type="submit" value="Upload Image" name="submit" onclick="add_picture();send_picture_tophpfile();">
           </form>
         </div>
         <div class="modal-footer">
@@ -173,7 +173,7 @@
   <script src="../js/admin.js"></script>
   <script src="../js/media_upload.js"></script>
   <script src="../js/show_hide.js"></script>
-  <script>
+   <script>
   
   /*-- Xmlhttprequest is used to send data to php file  this method
 		works only on the server the same as php script */
@@ -191,15 +191,53 @@
 }
 
   /* Save to server location db file files/pictures.js */ 
-  sendtophpfile("../php/save2.php", JSON.stringify(localStorage.getItem('pictures')));
+ // sendtophpfile("../php/save2.php", JSON.stringify(localStorage.getItem('pictures')));
   /* Send media location path to be deleted */
-  sendtophpfile("../php/delete_media.php",JSON.parse(localStorage.getItem('remove_path')));
-  
-  /* Save to server location db file files/videos.js */ 
-  sendtophpfile("../php/save3.php", JSON.stringify(localStorage.getItem('videos')));
+    sendtophpfile("../php/delete_media.php",JSON.parse(localStorage.getItem('remove_path')));
  
+  /* Save to server location db file files/videos.js */ 
+ // sendtophpfile("../php/save3.php", JSON.stringify(localStorage.getItem('videos')));
+  
+  
+  
+    function send_picture_tophpfile(){
+	
+	var data = 'data='+JSON.stringify(localStorage.getItem('pictures'));
+	
+	var xmlhttp = new XMLHttpRequest();
+
+	xmlhttp.open("POST","../php/save2.php",true);
+        //Must add this request header to XMLHttpRequest request for POST
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xmlhttp.send(data);
+}
+
+ function send_video_tophpfile(){
+	
+	var data = 'data='+JSON.stringify(localStorage.getItem('videos'));
+	
+	var xmlhttp = new XMLHttpRequest();
+
+	xmlhttp.open("POST","../php/save3.php",true);
+        //Must add this request header to XMLHttpRequest request for POST
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xmlhttp.send(data);
+}
+ 
+ function send_youtube_tophpfile(){
+	
+	var data = 'data='+JSON.stringify(localStorage.getItem('youtube'));
+	
+	var xmlhttp = new XMLHttpRequest();
+
+	xmlhttp.open("POST","../php/save5.php",true);
+        //Must add this request header to XMLHttpRequest request for POST
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xmlhttp.send(data);
+}
  
  </script>
+
 
     
 	  <footer>
