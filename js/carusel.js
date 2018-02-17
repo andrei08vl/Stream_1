@@ -22,7 +22,7 @@ function first_slide(i){
 	carusel+="class='glyphicon glyphicon-chevron-left'></span></a>";
 	}
 		
-	document.getElementById("carusel").innerHTML=carusel;
+	document.getElementById("slide").innerHTML=carusel;
 
 }
 
