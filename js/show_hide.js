@@ -2,6 +2,7 @@
 is very very practical */
 $(document).ready(function(){
       $("#vid").hide();
+	    $("#tube").hide();
     $("#pictures_show").click(function(){
         $("#pic").show();
          $("#vid").hide();
