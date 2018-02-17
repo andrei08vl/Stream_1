@@ -7,11 +7,11 @@
     for(p in pictures){
    
     
-    img+="<div class='box_img'>";
+    img+="<div class='box_img'><a href='#'onclick='first_slide("+p+")' type='button' data-toggle='modal' data-target='#myModal'>";
    
     img+="<img width='100%' src='../files/pictures/"+pictures[p].picture_name+"' alt='"+pictures[p].picture_name+"'/>";
 	
-    img+="</div>";
+    img+="</a></div>";
     }
     img+="</div>";
 	/* When you access the page, the pictures are displayed first */
