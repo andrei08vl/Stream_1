@@ -9,16 +9,16 @@ function show_events(){
 	var e; 
     var ev=" ";
    
-    for(e in events){
-   
 	ev+="<table class='table'><thead><tr><td><strong>Event date</strong></td><td><strong>Event time</strong></td>";
 	ev+="<td><strong>Event type</strong></td><td><strong>Action</strong></td></tr></thead>";
+    for(e in events){
+   
 	ev+="<tr><td>"+events[e].event_date+"</td><td>"+events[e].event_time+"</td><td>"+events[e].event_type+"</td>";
 	ev+="<td><button onclick='delete_event("+e+");save_eventstofile();'><span class='glyphicon glyphicon-trash'></span></button>";
 	ev+="<button onclick='send_event_toedit("+e+")' data-toggle='modal' data-target='#edit_event_modal'><span class='glyphicon glyphicon-edit' ></button></td></tr>";
-	ev+="</table>";
+	
     }
-   
+	ev+="</table>";
       
       document.getElementById("admin_events").innerHTML =ev;
       
