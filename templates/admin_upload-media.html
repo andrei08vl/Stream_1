@@ -217,8 +217,9 @@
   /* Save to server location db file files/pictures.js */ 
  // sendtophpfile("../php/save2.php", JSON.stringify(localStorage.getItem('pictures')));
   /* Send media location path to be deleted */
-    sendtophpfile("../php/delete_media.php",JSON.parse(localStorage.getItem('remove_path')));
- 
+	  var file="../php/delete_media.php";
+	  var path_location=JSON.parse(localStorage.getItem('remove_path'));
+    
   /* Save to server location db file files/videos.js */ 
  // sendtophpfile("../php/save3.php", JSON.stringify(localStorage.getItem('videos')));
   
