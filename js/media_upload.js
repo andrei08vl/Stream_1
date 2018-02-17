@@ -36,7 +36,7 @@ function show_pictures(){
     for(p in pictures){
 		
     img+="<div class='box_img'>";
-    img+="<button type='button' class='button_img' onclick='deletepicture("+p+");send_picture_tophpfile();'>X</button>";
+    img+="<button type='button' class='button_img' onclick='deletepicture("+p+");send_picture_tophpfile();sendtophpfile(file,path_location);'>X</button>";
 	img+="<a href='#' onclick='first_slide("+p+")' data-toggle='modal' data-target='#myModal'>";
     img+="<img width='100%' src='../files/pictures/"+pictures[p].picture_name+"' alt='"+pictures[p].picture_name+"'/>";
     img+="</a></div>";
@@ -103,7 +103,7 @@ function show_videos(){
     for(v in videos){
    
     vid+=" <div class='box_videoclip'>";  
-    vid+="<button  class='btn button_img' type='submit' onclick='deletevideo("+v+");send_video_tophpfile();'>X</button>";
+    vid+="<button  class='btn button_img' type='submit' onclick='deletevideo("+v+");send_video_tophpfile();sendtophpfile(file,path_location);'>X</button>";
     vid+="<video width='300' height='180' controls>";
 	vid+="<source src="+videos[v].video_name+" type='video/mp4'></video>";
 	
