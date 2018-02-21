@@ -36,7 +36,8 @@ function show_pictures(){
     for(p in pictures){
 		
     img+="<div class='box_img'>";
-    img+="<button type='button' class='button_img' onclick='deletepicture("+p+");send_picture_tophpfile();sendtophpfile(file,path_location);'>X</button>";
+    img+="<button type='button' class='button_img' onclick='deletepicture("+p+");send_picture_tophpfile();sendtophpfile(file,path_location);'";
+	img+=" data-toggle='tooltip' data-placement='left' title='Delete'>X</button>";
 	img+="<a href='#' onclick='first_slide("+p+")' data-toggle='modal' data-target='#myModal'>";
     img+="<img width='100%' src='../files/pictures/"+pictures[p].picture_name+"' alt='"+pictures[p].picture_name+"'/>";
     img+="</a></div>";
