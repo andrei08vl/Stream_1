@@ -104,7 +104,8 @@ function show_videos(){
     for(v in videos){
    
     vid+=" <div class='box_videoclip'>";  
-    vid+="<button  class='btn button_img' type='submit' onclick='deletevideo("+v+");send_video_tophpfile();sendtophpfile(file,path_location);'>X</button>";
+    vid+="<button  class='btn button_img' type='submit' onclick='deletevideo("+v+");send_video_tophpfile();sendtophpfile(file,path_location);'";
+	vid+=" data-toggle='tooltip' title='Delete'>X</button>";
     vid+="<video width='300' height='180' controls>";
 	vid+="<source src="+videos[v].video_name+" type='video/mp4'></video>";
 	
