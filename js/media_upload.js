@@ -13,7 +13,7 @@ function add_picture(){
      
 	pictures=JSON.parse(localStorage.getItem('pictures'));
 	}
-	var push={}
+	var push={};
 	var picture=document.getElementById("picture").value;
 
 	/* The value of input type "file" is e.g. "C:\\fakepath\\file name.file format"
