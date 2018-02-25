@@ -2,8 +2,8 @@
 
 ## Jonas Brothers music web page
 
-This site is used by a music band Jonas Brothers where they can post news, video clips, 
-pictures, events and get in touch with fans via email.
+This site is used by a music band known as Jonas-Brothers where they can post news, videos, 
+pictures, events and get in touch with their fans via email.
 
 Web address:[jbmusicweb.000webhostapp.com](http://jbmusicweb.000webhostapp.com)
 
@@ -31,12 +31,12 @@ of course for more complex or more secure applications, it is advisable to use n
 The disadvantage of node.js is compatibility can only be used with special servers such as heroku.
 
 For this project:
-	-first used the Stream_1 knowledge.
-	-for bootstrap [bootstrap docs](https://getbootstrap.com/docs/3.3/).
-	-for JQuery [docs](http://api.jquery.com/) and [sololearn](https://www.sololearn.com/Courses/).
-	-for PHP [sololearn](https://www.sololearn.com/Courses/).
-	-for JS [sololearn](https://www.sololearn.com/Courses/), 'https://developer.mozilla.org/bm/docs/Web/JavaScript'
-	and some knowledge from school.
+	- first used the Stream_1 knowledge.
+	- for bootstrap [bootstrap docs](https://getbootstrap.com/docs/3.3/).
+	- for JQuery [docs](http://api.jquery.com/) and [sololearn](https://www.sololearn.com/Courses/).
+	- for PHP [sololearn](https://www.sololearn.com/Courses/).
+	- for JS [sololearn](https://www.sololearn.com/Courses/), 'https://developer.mozilla.org/bm/docs/Web/JavaScript'
+	  and some knowledge from school.
 
 
 
