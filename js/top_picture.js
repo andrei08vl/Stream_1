@@ -22,8 +22,8 @@ function slide_head_img(){
 	var background=["#9d9797","white","black","#110706","#242828"];
 	
     document.body.style.backgroundColor =background[i];
-	// Run function every 300000 miliseconds(5 minutes)
-	setTimeout("slide_head_img()",300000);
+	// Run function every 60000 miliseconds(1 minutes)
+	setTimeout("slide_head_img()",60000);
 	
 }
 
