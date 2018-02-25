@@ -31,12 +31,12 @@ of course for more complex or more secure applications, it is advisable to use n
 The disadvantage of node.js is compatibility can only be used with special servers such as heroku.
 
 For this project:
-	- first used the Stream_1 knowledge.
-	- for bootstrap [bootstrap docs](https://getbootstrap.com/docs/3.3/).
-	- for JQuery [docs](http://api.jquery.com/) and [sololearn](https://www.sololearn.com/Courses/).
-	- for PHP [sololearn](https://www.sololearn.com/Courses/).
+	- first used the Stream_1 knowledge
+	- for bootstrap [bootstrap docs](https://getbootstrap.com/docs/3.3/)
+	- for JQuery [docs](http://api.jquery.com/) and [sololearn](https://www.sololearn.com/Courses/)
+	- for PHP [sololearn](https://www.sololearn.com/Courses/)
 	- for JS [sololearn](https://www.sololearn.com/Courses/), 'https://developer.mozilla.org/bm/docs/Web/JavaScript'
-	  and some knowledge from school.
+	  and some knowledge from school
 
 
 
