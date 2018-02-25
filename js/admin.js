@@ -10,7 +10,7 @@ function logout (){
 function check_admin(){
 	/* if someone attempts to hit the page without authentication will be automatically redirected 
 	e.g domainname/templates/admin_page*/
-	 var user = {admin:"test", password:"test"};
+	  var user = {admin:"Jonas-Brothers", password:"JohnLennon1964"};
      var admin=localStorage.getItem("username");
      var password=localStorage.getItem("password");
     if(user.admin==admin && user.password==password){  

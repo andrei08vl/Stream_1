@@ -1,5 +1,5 @@
 
- var user = {admin:"Jonas-Brothers", password:"JohnLennon1964"};
+var user = {admin:"Jonas-Brothers", password:"JohnLennon1964"};
 
 function script(){
     var admin = document.getElementById('admin');
