@@ -26,9 +26,9 @@
     for(v in videos){
    
     
-    vi+="<div class='box_videoclip'><video width='300' height='180'>";
+    vi+="<div class='box_videoclip'><video width='300' height='180' controls>";
    
-    vi+="<source class='img_admin' src='../files/videos/"+videos[v].video_name+" type='video/mp4'>";
+    vi+="<source src='../files/videos/"+videos[v].video_name+"' type='video/mp4'>";
 	
     vi+="<div></video>";
     }
