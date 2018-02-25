@@ -1,9 +1,11 @@
 
+ var user = {admin:"Jonas-Brothers", password:"JohnLennon1964"};
+
 function script(){
     var admin = document.getElementById('admin');
     var password = document.getElementById('password');
 	var msg="ussername or password are incorect";
-    var user = {admin:"test", password:"test"};
+   
     
  
 if(admin.value==user.admin) {
@@ -27,7 +29,7 @@ else{
 
 function logged(){
 	
-     var user = {admin:"test", password:"test"};
+    
 	 /* To get data from localStorage is used localStorage.getItem */
      var admin=localStorage.getItem("username");
      var password=localStorage.getItem("password");
