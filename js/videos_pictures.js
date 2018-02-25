@@ -30,7 +30,7 @@
    
     vi+="<source src='../files/videos/"+videos[v].video_name+"' type='video/mp4'>";
 	
-    vi+="<div></video>";
+    vi+="</video></div>";
     }
     vi+="</div>";
   
