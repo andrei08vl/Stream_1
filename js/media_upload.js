@@ -107,7 +107,7 @@ function show_videos(){
     vid+="<button  class='btn button_img' type='submit' onclick='deletevideo("+v+");send_video_tophpfile();sendtophpfile(file,path_location);'";
 	vid+=" data-toggle='tooltip' title='Delete'>X</button>";
     vid+="<video width='300' height='180' controls>";
-	vid+="<source src="+videos[v].video_name+" type='video/mp4'></video>";
+	vid+="<source src='../files/videos/"+videos[v].video_name+"' type='video/mp4'></video>";
 	
     vid+="</div>";
     }
