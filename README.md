@@ -2,7 +2,7 @@
 
 ## Jonas Brothers music web page
 
-This site is used by a music band known as Jonas-Brothers where they can post news, videos, 
+This web page is used by a music band known as Jonas-Brothers where they can post news, videos, 
 pictures, events and get in touch with their fans via email.
 
 Web address:[jbmusicweb.000webhostapp.com](http://jbmusicweb.000webhostapp.com)
