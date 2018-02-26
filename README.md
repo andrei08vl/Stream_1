@@ -37,6 +37,12 @@ For this project:
 	- for PHP [sololearn](https://www.sololearn.com/Courses/)
 	- for JS [sololearn](https://www.sololearn.com/Courses/), 'https://developer.mozilla.org/bm/docs/Web/JavaScript'
 	  and some knowledge from school
+	  
+To send emails from contact form I used 'https://formspree.io/' service, the email address of the music band is:
+
+email: jbmusic_mails@yahoo.com
+password: JB08music
+
 
 
 
